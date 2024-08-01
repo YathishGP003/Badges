@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chess Engine</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oakmac/chessboardjs/lib/chessboard.css" />
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background: #000 url('https://www.transparenttextures.com/patterns/subtle-prism.png');
+			margin: 0;
+			padding: 0;
+		}
+
+		.board-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 20px;
+		}
+
+		.board {
+			width: 400px;
+			background: #111;
+			border-radius: 8px;
+			box-shadow: 0 10px 20px rgba(255, 255, 255, 0.19), 0 6px 6px rgba(255, 255, 255, 0.23);
+		}
+
+		.title {
+			text-align: center;
+			padding: 20px 0;
+		}
+
+		.control-panel {
+			display: flex;
+			justify-content: space-around;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		#info {
+			text-align: center;
+			padding: 20px 0;
+		}
+
+		.chessboard .square-55d63:hover {
+			background: #879aac !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="board-container">
+		<h3 class="title">Chess Engine</h3>
+		<div class="control-panel">
+			<div>
+				Theme:
+				<select id="themeSelector" class="btn btn-light dropdown-toggle">
+					<option>Light</option>
+					<option>Dark</option>
+					<option>Classic</option>
+					<option>Minimal</option>
+				</select>
+			</div>
+			<div>
+				Search depth:
+				<select id="searchDepth" class="btn btn-light dropdown-toggle">
+					<option>1</option>
+					<option>2</option>
+					<option selected>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<button id="newGameButton" class="btn btn-light">New Game</button>
+		</div>
+		<div id="myBoard" class="board"></div>
+		<div id="info"></div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+	<script src="https://cdn.rawgit.com/lhartikk/simple-chess-ai/master/lib/js/chess.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
